@@ -1,0 +1,59 @@
+
+/*Classes*/
+.container {
+  border: 2px solid rgb(95, 95, 95);
+  background-color: white;
+  width: 30em;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.completed {
+  text-decoration: line-through;
+
+}
+
+/*Elements*/
+body {
+  background-color: aliceblue;
+}
+
+h2 {
+  color: rgb(95, 95, 95);
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+label {
+  color: rgb(95, 95, 95);
+  font-family: "Raleway", sans-serif;
+}
+
+small {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  font-family: "Raleway", sans-serif;
+}
+
+/*IDs*/
+
+/*button*/
+#addTodo {
+  border-radius: 5px;
+  height: 25px;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(235, 185, 93);
+}
+
+#todoInput {
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  font-family: "Raleway", sans-serif;
+}
