@@ -25,9 +25,18 @@
 }
 
 .trashcan {
+  
   float: right;
   cursor: pointer;
   font-size: 23px;
+  
+}
+
+.clearAll {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+  padding-bottom: none;
 }
 
 /*Elements*/

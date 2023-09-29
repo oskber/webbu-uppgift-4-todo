@@ -28,7 +28,10 @@ function changeStatus(todoText,completed) {
 }
 
 
+
+
 button.addEventListener("click", function () {
+  
   //fetch value from input
   const text = input.value;
 
@@ -51,7 +54,7 @@ button.addEventListener("click", function () {
 
   //create li-element in ul
   const item = document.createElement("li");
-  list.appendChild(item);  //Appends(BIFOGAR) item to LIST
+  list.appendChild(item);  //Appends(BIFOGAR) item to LIST(ul)
 
   const itemLabel = document.createElement("span"); //empty span
   itemLabel.innerText = text;   //adds text to span
@@ -62,6 +65,12 @@ button.addEventListener("click", function () {
   trashcan.innerHTML = "&#128465";
   trashcan.setAttribute("class","trashcan");
   item.appendChild(trashcan);
+
+  const clearAll = document.createElement("a");
+  clearAll.innerHTML = "Clear All";
+  clearAll.setAttribute("class", "clearAll");
+  item.appendChild(clearAll);
+
 
   
 
@@ -110,6 +119,22 @@ button.addEventListener("click", function () {
     
     /* remove list-element */
     item.remove();
+  })
+
+  // Clear All-button to clear List 
+
+  clearAll.addEventListener("click", function(){
+
+    if (item.getAttribute("class") == "completed"){
+      completedCount = 0;
+    }
+    completedInfo.innerText = `${completedCount} completed`;
+    
+    document.querySelector("clearAll");
+    list.innerHTML = "";
+
+    simpleTodoArray.length = 0;
+
   })
 
   //Empty input field
