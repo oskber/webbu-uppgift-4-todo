@@ -3,30 +3,47 @@
 .container {
   border: 2px solid rgb(95, 95, 95);
   background-color: white;
-  width: 30em;
   padding: 10px;
   border-radius: 10px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  
+}
 
+.todo-container {
+  
+  padding: 10px;
 }
 
 .completed {
   text-decoration: line-through;
   color: rgb(167, 167, 167);
+}
 
+.trashcan {
+  float: right;
+  cursor: pointer;
+  font-size: 23px;
 }
 
 /*Elements*/
 body {
-  background-color: aliceblue;
+  background-color: rgb(109, 109, 138)
 }
 
 h2 {
   color: rgb(95, 95, 95);
   font-family: "Raleway", sans-serif;
+  padding-left: 10px;
 }
 
 p {
   font-family: "Raleway", sans-serif;
+  padding-left: 10px;
 }
 
 label {
@@ -40,34 +57,55 @@ small {
 
 ul {
   font-family: "Raleway", sans-serif;
-  margin-left: 40px;
+  padding-left: 10px;
+  list-style: none;
 }
 
-ul li::marker {
+li::marker {
   font-family: FontAwesome;
   content: "\f249";
-  font-size: 10px
+  font-size: 8px;
+  justify-content: center;
+  display: flex;
+  color: orange;
 }
 
-ul li {
+li {
   padding-left: 5px;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+  font-size: 1rem;
+  color: #595959;
+}
+
+li:hover {
+  cursor: pointer;
 }
 
 /*IDs*/
 
-/*button*/
+/* add todo icon */
 #addTodo {
-  border-radius: 5px;
-  height: 25px;
-  font-family: "Raleway", sans-serif;
-  background-color: rgb(235, 185, 93);
+  font-size: 25px;
+  border: none;
+  background: none;
+  color: rgb(52, 161, 52);
 }
+
+#addTodo:hover {
+  color: rgb(51, 194, 51);
+}
+
 
 /*Input window*/
 #todoInput {
   border-radius: 5px;
   border: 1px solid;
-  width: 200px;
-  height: 20px;
+  width: 350px;
+  height: 27px;
   font-family: "Raleway", sans-serif;
+  overflow: hidden;
+  vertical-align: bottom;
 }
+
