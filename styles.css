@@ -1,22 +1,25 @@
 
 /*Classes*/
 .container {
-  border: 2px solid rgb(95, 95, 95);
-  background-color: white;
+  border: 5px solid rgb(127, 218, 228);
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
-  width: 500px;
+  min-width: 500px;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   
 }
 
+
 .todo-container {
-  
+
   padding: 10px;
+  min-height: 200px;
 }
 
 .completed {
@@ -39,13 +42,23 @@
 
 /*Elements*/
 body {
-  background-color: rgb(109, 109, 138)
+  background: rgb(49,240,234);
+background: linear-gradient(180deg, rgba(49,240,234,1) 0%, rgba(0,94,214,1) 100%);
+background-repeat: no-repeat;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
-h2 {
-  color: rgb(95, 95, 95);
-  font-family: "Raleway", sans-serif;
-  padding-left: 10px;
+header {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 15rem;
+  width: 15rem;
 }
 
 p {
@@ -134,3 +147,4 @@ li:hover {
   transition: all 300ms ease;
   cursor: pointer;
 }
+
