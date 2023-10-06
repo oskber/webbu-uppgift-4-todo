@@ -62,16 +62,16 @@ button.addEventListener("click", function () {
 
   // create span-element that has a trashcan
   const trashcan = document.createElement("span");
-  trashcan.innerHTML = "&#128465";
   trashcan.setAttribute("class","trashcan");
+  trashcan.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   item.appendChild(trashcan);
 
-  const clearAll = document.createElement("a");
+/*   const clearAll = document.createElement("a");
   clearAll.innerHTML = "Clear All";
   clearAll.setAttribute("class", "clearAll");
   item.appendChild(clearAll);
 
-
+ */
   
 
   //add a listnener to the span. AFTER itemLabel (= span) is created. //Change completedCount
@@ -124,6 +124,8 @@ button.addEventListener("click", function () {
   // Clear All-button to clear List 
 
   clearAll.addEventListener("click", function(){
+
+    
 
     if (item.getAttribute("class") == "completed"){
       completedCount = 0;

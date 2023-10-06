@@ -29,15 +29,13 @@
   float: right;
   cursor: pointer;
   font-size: 23px;
-  
 }
 
-.clearAll {
-  display: inline;
-  float: right;
-  padding-right: 10px;
-  padding-bottom: none;
+.trashcan:hover{
+  color: #898989;
 }
+
+
 
 /*Elements*/
 body {
@@ -118,3 +116,21 @@ li:hover {
   vertical-align: bottom;
 }
 
+
+
+#clearAll {
+  float: right;
+  border: none;
+  
+  font-size: 1rem;
+  background: none;
+  
+}
+
+#clearAll:hover {
+  
+  border-bottom: 1px solid #595959;
+  color: #595959;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
