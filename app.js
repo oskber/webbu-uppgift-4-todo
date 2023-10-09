@@ -29,11 +29,13 @@ function changeStatus(todoText,completed) {
 
 
 
-
-button.addEventListener("click", function () {
+button.addEventListener("click", function() { 
+/* input.addEventListener("keyup", e => {
   
-  //fetch value from input
-  const text = input.value;
+  
+  if(e.keyCode === 13){
+    e.preventDefault(); */
+    const text = input.value;
 
   //Check that input is not empty
   if(text.length == 0) {
@@ -65,13 +67,6 @@ button.addEventListener("click", function () {
   trashcan.setAttribute("class","trashcan");
   trashcan.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   item.appendChild(trashcan);
-
-/*   const clearAll = document.createElement("a");
-  clearAll.innerHTML = "Clear All";
-  clearAll.setAttribute("class", "clearAll");
-  item.appendChild(clearAll);
-
- */
   
 
   //add a listnener to the span. AFTER itemLabel (= span) is created. //Change completedCount
@@ -142,5 +137,16 @@ button.addEventListener("click", function () {
   //Empty input field
       input.value = "";
 
-});
+    
+  }
+)
 
+
+//Eventlistnener for input to do button-function
+
+input.addEventListener("keyup", function(e) {
+  if(e.keyCode === 13){
+    e.preventDefault();
+    button.click();
+  }
+})
