@@ -38,6 +38,17 @@
   color: #898989;
 }
 
+.checkbox {
+  float: right;
+  padding-right: 10px;
+  font-size: 23px;
+}
+
+.checkbox:hover {
+  color: #898989;
+}
+
+
 
 
 /*Elements*/
