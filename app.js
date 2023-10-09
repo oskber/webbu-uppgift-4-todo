@@ -67,10 +67,15 @@ button.addEventListener("click", function() {
   trashcan.setAttribute("class","trashcan");
   trashcan.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   item.appendChild(trashcan);
+
+  const checkbox = document.createElement("span");
+  checkbox.setAttribute("class", "checkbox");
+  checkbox.innerHTML = '<i class="fas fa-check-square"></i>'
+  item.appendChild(checkbox);
   
 
   //add a listnener to the span. AFTER itemLabel (= span) is created. //Change completedCount
-  itemLabel.addEventListener("click", function() {
+  /* itemLabel.addEventListener("click", function() {
 
     //toggle completed/uncompleted
     if (item.getAttribute("class") == "completed") {
@@ -96,7 +101,7 @@ button.addEventListener("click", function() {
 
       completedInfo.innerText = `${completedCount} completed`;
 
-  })  
+  })   */
       
   //add listener to trashcan
   trashcan.addEventListener("click", function(){
@@ -114,6 +119,34 @@ button.addEventListener("click", function() {
     
     /* remove list-element */
     item.remove();
+  })
+
+  // Checkbox eventlistener
+  checkbox.addEventListener("click", function(){
+
+    if (item.getAttribute("class") == "completed") {
+
+      item.setAttribute("class", "");
+
+      let checked = item.firstChild.firstChild.textContent;
+      changeStatus(checked, false);
+      completedCount--
+      }
+
+      else {
+  
+        item.setAttribute("class", "completed");
+
+        //Change status on object in array to true
+        let checked = item.firstChild.firstChild.textContent;
+        changeStatus(checked, true);
+        completedCount++
+
+    }
+    completedInfo.innerText = `${completedCount} completed`;
+
+
+
   })
 
   // Clear All-button to clear List 
