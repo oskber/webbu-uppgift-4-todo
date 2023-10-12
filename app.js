@@ -110,7 +110,7 @@ button.addEventListener("click", function() {
       completedCount--
     }
 
-    completedInfo.innerText = `${completedCount} completed`;
+    completedInfo.innerText = `Completed: ${completedCount}`;
     
     //Set todo-array correct
     let removeText = item.firstChild.firstChild.textContent;
@@ -143,7 +143,7 @@ button.addEventListener("click", function() {
         completedCount++
 
     }
-    completedInfo.innerText = `${completedCount} completed`;
+    completedInfo.innerText = `Completed: ${completedCount}`;
 
 
 
@@ -158,7 +158,7 @@ button.addEventListener("click", function() {
     if (item.getAttribute("class") == "completed"){
       completedCount = 0;
     }
-    completedInfo.innerText = `${completedCount} completed`;
+    completedInfo.innerText = `Completed: ${completedCount}`;
     
     document.querySelector("clearAll");
     list.innerHTML = "";

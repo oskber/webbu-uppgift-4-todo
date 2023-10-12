@@ -5,34 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link rel="stylesheet" type="text/css " href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
-    
-    <header >
-      <img id="logo" src="images/todologo.png" alt="logo">
+    <header>
+      <img id="logo" src="images/todologo.png" alt="logo" />
     </header>
 
     <div class="container">
 
-      <p>0 Completed</p>
       <div class="todo-container">
         
-        <label for="todoInput">Add Task</label>
-        <input type="text" id="todoInput" name="todo" placeholder="New Task..." />
+        <div class="input">
+          <input
+          type="text"
+          id="todoInput"
+          name="todo"
+          placeholder="Skriv en uppgift"
+        />
 
         <button id="addTodo"><i class="fas fa-plus-square"></i></button>
+        </div>
         
-        <ul>
-        </ul>
+        <ul></ul>
 
-       <button id="clearAll">Clear All</button>
+        <span class="compClear">
+          <p>Completed: 0</p>
+          <button id="clearAll">Clear All</button>
+        </span>
         
       </div>
 
       <small></small>
-
     </div>
+
 
     <script src="app.js"></script>
   </body>
